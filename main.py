@@ -13,6 +13,9 @@ from calculadora import Calculadora
 class VentanaPrincipal(QWidget):
     def __init__(self):
         # ATRIBUTOS
+        self.ventana_secundaria = None
+        self.ventana_calculadora = None
+        self.ventana_actualizar = None
         self.tabla_a_mostrar = None
         self.file = None
         self.titulo_tabla = ['Año', 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
@@ -134,6 +137,10 @@ class VentanaPrincipal(QWidget):
 class Actualizador(QWidget):
 
     def __init__(self, tabla):
+        self.file = None
+        self.valor_entrada = None
+        self.anio_entrada = None
+        self.mes_entrada = None
         self.lista_mes = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
         self.lista_anio = ['1970', '1971', '1972', '1973', '1974', '1975', '1976', '1977', '1978', '1979', '1980',
                            '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988', '1989', '1990', '1991',
