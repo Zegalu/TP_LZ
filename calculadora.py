@@ -9,6 +9,8 @@ class Calculadora(QWidget):
 
     def __init__(self, tabla):
         super().__init__()
+        self.lista_a_guardar = None
+        self.file = None
         self.valor_entrada = None
         self.mes_entrada = None
         self.anio_entrada = None
